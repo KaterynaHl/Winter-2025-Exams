@@ -11,7 +11,6 @@
     "software engineering",
     "exams"
   ],
-  "readmeFilename": "README.md",
   "engines": {
     "node": ">=18.0.0"
   },
@@ -22,5 +21,18 @@
   "homepage": "https://github.com/HowProgrammingWorks/Index",
   "scripts": {
     "test": "node --test"
+  },
+  "main": "check.js",
+  "bugs": {
+    "url": "https://github.com/HowProgrammingWorks/Winter-2024-Exams/issues"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.1",
+    "globals": "^15.14.0",
+    "prettier": "^3.4.2",
+    "prettier-eslint": "^16.3.0"
   }
 }
