@@ -8,13 +8,8 @@ const compare = (firstDict, secondDict) => {
     !firstKeys.every((key) => secondKeys.includes(key))
   )
     return false;
-  for (c of firstKeys) {
-    if (firstDict[c] === secondDict[c]) isEqual = isEqual && true;
-    else {
-      isEqual = isEqual && false;
-    }
-  }
-  return isEqual;
+
+  return firstKeys.every((key) => firstDict[key] === secondDict[key]);
 };
 
 module.exports = compare;
