@@ -1,17 +1,17 @@
 // Compare two dictionaries
 
 const compare = (firstDict, secondDict) => {
-  let a = Object.keys(first_values);
-  let b = Object.keys(second_values);
-  if (a.join("-") !== b.join("-")) return false;
-  let e = true;
-  for (c of a) {
-    if (first_values[c] === second_values[c]) e = e && true;
+  let firstKeys = Object.keys(firstDict);
+  let secondKeys = Object.keys(secondDict);
+  if (firstKeys.join("-") !== secondKeys.join("-")) return false;
+  let isEqual = true;
+  for (c of firstKeys) {
+    if (firstDict[c] === secondDict[c]) isEqual = isEqual && true;
     else {
-      e = e && false;
+      isEqual = isEqual && false;
     }
   }
-  return e;
+  return isEqual;
 };
 
 module.exports = compare;
