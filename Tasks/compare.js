@@ -5,7 +5,9 @@ const compare = (firstDict, secondDict) => {
   const secondKeys = Object.keys(secondDict);
   if (firstKeys.length !== secondKeys.length) return false;
 
-  return firstKeys.every((key) => firstDict[key] === secondDict[key]);
+  return firstKeys.every(
+    (key, index) => firstDict[key] === secondDict[secondKeys[index]]
+  );
 };
 
 module.exports = compare;
