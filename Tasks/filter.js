@@ -1,8 +1,8 @@
 // Refactor following solution
 // Filter array by type name
 
-const Filter = (T, t) => {
-  const result = T.filter((item) => typeof item === t);
+const Filter = (array, typeName) => {
+  const result = array.filter((item) => typeof item === typeName);
   return result;
 };
 
