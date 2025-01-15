@@ -15,6 +15,9 @@ const monthNames = [
   "nov",
   "dec",
 ];
+const monthMap = Object.fromEntries(
+  monthNames.map((month, index) => [month, index + 1])
+);
 
 const getMonthNumber = (monthName) => {
   const normalizedMonth = monthName.toLowerCase();
