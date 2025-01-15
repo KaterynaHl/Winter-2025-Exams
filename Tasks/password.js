@@ -14,8 +14,9 @@ let generatePassword = (alphabet, length) => {
   let password = "";
   for (let i = 0; i < length; i++) {
     const getRandomIndex = (max) => Math.floor(Math.random() * max);
-    const index = getRandomIndex(MAX);
-    password += alphabet[index];
+    const randomIndex = getRandomIndex(MAX);
+    const randomChar = alphabet[randomIndex];
+    password += randomChar;
   }
   return password;
 };
