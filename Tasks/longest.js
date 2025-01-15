@@ -1,7 +1,7 @@
 // Refactor following solution
 // Find longest string
 
-const longest = (line = []) => {
+const findLongestString = (line) => {
   let maxLength = -1;
   let longestString = "";
   for (let string of line) {
@@ -13,4 +13,5 @@ const longest = (line = []) => {
   return longestString;
 };
 
+const longest = (line = []) => findLongestString(line);
 module.exports = longest;
