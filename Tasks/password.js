@@ -10,15 +10,11 @@ let generatePassword = (alphabet, length) => {
     throw new Error("Length must be a non-negative integer.");
   }
 
-  const MAX = alphabet.length;
-  let password = "";
-  for (let i = 0; i < length; i++) {
-    const getRandomIndex = (max) => Math.floor(Math.random() * max);
-    const randomIndex = getRandomIndex(MAX);
-    const randomChar = alphabet[randomIndex];
-    password += randomChar;
-  }
-  return password;
+  const getRandomIndex = () => Math.floor(Math.random() * alphabet.length);
+  return Array.from(
+    { length },
+    () => alphabet[getRandomIndex(alphabet.length)]
+  ).join("");
 };
 
 module.exports = generatePassword;
