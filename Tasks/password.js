@@ -7,7 +7,7 @@ let generatePassword = (alphabet, length) => {
   for (let i = 0; i < length; i++) {
     const getRandomIndex = (max) => Math.floor(Math.random() * max);
     const index = getRandomIndex(MAX);
-    password = password + alphabet[index];
+    password += alphabet[index];
   }
   return password;
 };
