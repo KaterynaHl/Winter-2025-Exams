@@ -4,13 +4,11 @@
 const findLongestString = (line) => {
   let maxLength = -1;
   let longestString = "";
-  for (let string of line) {
-    if (string.length > maxLength) {
-      maxLength = string.length;
-      longestString = string;
-    }
-  }
-  return longestString;
+
+  line.reduce(
+    (longest, current) => (current.length > longest.length ? current : longest),
+    ""
+  );
 };
 
 const longest = (line = []) => findLongestString(line);
