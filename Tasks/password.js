@@ -1,7 +1,7 @@
 // Refactor following solution
 // Generate random password
 
-let generatePassword = (alphabet, length) => {
+const generatePassword = (alphabet, length) => {
   if (typeof alphabet !== "string" || alphabet.length === 0) {
     throw new Error("Alphabet must be a non-empty string.");
   }
