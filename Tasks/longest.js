@@ -2,9 +2,6 @@
 // Find longest string
 
 const findLongestString = (line) => {
-  let maxLength = -1;
-  let longestString = "";
-
   line.reduce(
     (longest, current) => (current.length > longest.length ? current : longest),
     ""
