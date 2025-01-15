@@ -21,13 +21,10 @@ const monthMap = Object.fromEntries(
 
 const getMonthNumber = (monthName) => {
   const normalizedMonth = monthName.toLowerCase();
-  const monthIndex = monthNames.findIndex((month) =>
+  const matchedMonth = Object.keys(monthMap).find((month) =>
     normalizedMonth.startsWith(month)
   );
-  if (monthIndex !== -1) {
-    return monthIndex + 1;
-  }
-  return -1;
+  return matchedMonth ? monthMap[matchedMonth] : -1;
 };
 
 module.exports = getMonthNumber;
